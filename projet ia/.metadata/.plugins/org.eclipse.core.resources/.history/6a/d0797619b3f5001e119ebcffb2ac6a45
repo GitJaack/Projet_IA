@@ -1,8 +1,6 @@
 package main;
 
 import page.PageAcceuil;
-import javax.swing.JOptionPane;
-
 
 public class Main {
 

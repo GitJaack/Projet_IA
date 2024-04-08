@@ -46,8 +46,6 @@ public class PageAcceuil extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		this.setLocationRelativeTo(null);
-		
 		JButton btnNewButton = new JButton("Quitter");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -6208,3 +6208,1178 @@ Binding(ALT+COMMAND+R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.732
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred getting the plug-ins in this container
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:682)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:591)
+	at org.eclipse.pde.internal.core.PluginModelManager.findModel(PluginModelManager.java:1053)
+	at org.eclipse.pde.core.plugin.PluginRegistry.findModel(PluginRegistry.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.wb.internal.core.utils.reflect.ReflectionUtils.invokeMethod(ReflectionUtils.java:901)
+	at org.eclipse.wb.internal.core.utils.pde.ReflectivePDE.invokeStatic(ReflectivePDE.java:90)
+	at org.eclipse.wb.internal.core.utils.pde.ReflectivePDE.findModel(ReflectivePDE.java:65)
+	at org.eclipse.wb.internal.core.utils.reflect.ProjectClassLoader.addFragments(ProjectClassLoader.java:139)
+	at org.eclipse.wb.internal.core.utils.reflect.ProjectClassLoader.addRuntimeClassPathEntries(ProjectClassLoader.java:127)
+	at org.eclipse.wb.internal.core.utils.reflect.ProjectClassLoader.getClasspathUrls(ProjectClassLoader.java:73)
+	at org.eclipse.wb.internal.core.utils.reflect.ProjectClassLoader.create(ProjectClassLoader.java:64)
+	at org.eclipse.wb.internal.core.parser.AbstractParseFactory.createClassLoader_project(AbstractParseFactory.java:792)
+	at org.eclipse.wb.internal.core.parser.AbstractParseFactory.getClassLoader(AbstractParseFactory.java:747)
+	at org.eclipse.wb.internal.core.parser.AbstractParseFactory.initializeClassLoader(AbstractParseFactory.java:732)
+	at org.eclipse.wb.internal.swing.parser.ParseFactory.initializeClassLoader(ParseFactory.java:282)
+	at org.eclipse.wb.internal.swing.parser.ParseFactory.getRootContext(ParseFactory.java:106)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.prepareParseContext(JavaInfoParser.java:1184)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:242)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:152)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser$1.runObject(JavaInfoParser.java:1)
+	at org.eclipse.wb.internal.core.utils.execution.ExecutionUtils.runDesignTime(ExecutionUtils.java:159)
+	at org.eclipse.wb.internal.core.parser.JavaInfoParser.parse(JavaInfoParser.java:150)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:534)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.source_5.1.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.xlc.source_5.1.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.macosx.source_5.1.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.parser.upc.source_5.1.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.source_5.1.2.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.core.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.core.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.ui.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.memorybrowser.source_1.2.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.search.source_1.2.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.traditional.source_1.2.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.transport.source_1.2.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.source_2.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.ui.source_2.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.source_2.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.ui.source_2.0.1.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.errorparsers.xlc.source_5.0.100.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.launch.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.core.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.ui.source_6.0.1.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.xlc.core.source_5.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.core.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.gnu.ui.source_5.0.100.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.ui.source_5.1.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.core.source_5.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.ui.source_6.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlupc.ui.source_1.0.0.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.source_6.0.2.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.ui.source_5.1.2.201002161416.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.common.source_2.24.0.v20220123-0838.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.ecore.source_2.26.0.v20220123-0838.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ide.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ui.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.ui.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.lib.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.runtime.source_2.12.2.v20220118-1914.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.core.source_2.26.0.v20220228-0844.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.common.source_2.26.0.v20220228-0844.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.source_2.26.0.v20220228-0844.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.macro.source_2.26.0.v20220228-0748.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.source_2.26.0.v20220228-0748.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.m2e.source_2.26.0.v20220228-0844.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.standalone.source_2.26.0.v20220228-0844.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.activities.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.standalone.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.buildship.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.edit.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.jdt38.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ecore.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.generator.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ide.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.java.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.junit4.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.logging.source_1.2.15.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.m2e.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ide.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.smap.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.testing.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codemining.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ide.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.ecore.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.shared.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.testing.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.util.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ide.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.junit.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.lib.source_2.26.0.v20220228-0748.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.testing.source_2.26.0.v20220228-0758.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.testing.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.generator.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ide.source_2.26.0.v20220228-0751.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.graph.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.source_2.26.0.v20220228-0812.jar
+Contains: File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.wizard.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.743
+!MESSAGE Problems occurred getting the plug-ins in this container
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.source_5.1.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.xlc.source_5.1.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.macosx.source_5.1.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.parser.upc.source_5.1.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.source_5.1.2.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.core.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.core.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.ui.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.memorybrowser.source_1.2.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.search.source_1.2.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.traditional.source_1.2.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.transport.source_1.2.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.source_2.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.ui.source_2.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.source_2.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.ui.source_2.0.1.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.errorparsers.xlc.source_5.0.100.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.launch.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.core.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.ui.source_6.0.1.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.xlc.core.source_5.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.core.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.745
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.gnu.ui.source_5.0.100.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.ui.source_5.1.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.core.source_5.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.ui.source_6.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlupc.ui.source_1.0.0.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.source_6.0.2.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.ui.source_5.1.2.201002161416.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.common.source_2.24.0.v20220123-0838.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.ecore.source_2.26.0.v20220123-0838.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ide.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ui.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.ui.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.lib.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.runtime.source_2.12.2.v20220118-1914.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.core.source_2.26.0.v20220228-0844.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.746
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.common.source_2.26.0.v20220228-0844.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.source_2.26.0.v20220228-0844.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.macro.source_2.26.0.v20220228-0748.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.source_2.26.0.v20220228-0748.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.m2e.source_2.26.0.v20220228-0844.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.standalone.source_2.26.0.v20220228-0844.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.activities.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.standalone.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.buildship.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.edit.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.jdt38.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.747
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ecore.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.generator.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ide.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.java.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.junit4.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.logging.source_1.2.15.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.m2e.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ide.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.smap.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.testing.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codemining.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ide.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.ecore.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.shared.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.testing.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.util.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ide.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.junit.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.lib.source_2.26.0.v20220228-0748.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.testing.source_2.26.0.v20220228-0758.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.748
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.testing.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.750
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.generator.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.750
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ide.source_2.26.0.v20220228-0751.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.750
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.graph.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.750
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.source_2.26.0.v20220228-0812.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2024-04-08 15:57:51.751
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.wizard.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.753
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.source_5.1.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.754
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.lrparser.xlc.source_5.1.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.755
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.macosx.source_5.1.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.755
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.parser.upc.source_5.1.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.755
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.core.source_5.1.2.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.756
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.core.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.756
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.core.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.756
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.mi.ui.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.757
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.memorybrowser.source_1.2.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.757
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.search.source_1.2.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.757
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.traditional.source_1.2.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.757
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.memory.transport.source_1.2.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.758
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.debug.ui.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.758
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.source_2.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.759
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.gdb.ui.source_2.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.759
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.source_2.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.760
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.dsf.ui.source_2.0.1.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.761
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.errorparsers.xlc.source_5.0.100.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.761
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.launch.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.761
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.core.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.761
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.ui.source_6.0.1.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.762
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.make.xlc.core.source_5.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.763
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.core.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.763
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.gnu.ui.source_5.0.100.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.763
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.ui.source_5.1.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.764
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.core.source_5.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.764
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlc.ui.source_6.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.764
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.managedbuilder.xlupc.ui.source_1.0.0.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.764
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.source_6.0.2.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.765
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.cdt.ui.source_5.1.2.201002161416.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.765
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.common.source_2.24.0.v20220123-0838.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.765
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.ecore.source_2.26.0.v20220123-0838.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.766
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ide.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.767
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.768
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.language.ui.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.768
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.768
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.launch.ui.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.769
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.lib.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.769
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.emf.mwe2.runtime.source_2.12.2.v20220118-1914.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.769
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.core.source_2.26.0.v20220228-0844.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.769
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.common.source_2.26.0.v20220228-0844.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.769
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.ide.source_2.26.0.v20220228-0844.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.770
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.macro.source_2.26.0.v20220228-0748.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.770
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.lib.source_2.26.0.v20220228-0748.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.771
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.m2e.source_2.26.0.v20220228-0844.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.771
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtend.standalone.source_2.26.0.v20220228-0844.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.771
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.activities.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.772
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.772
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.builder.standalone.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.772
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.buildship.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.772
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.edit.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.773
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.jdt38.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.773
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.shared.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.773
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.773
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.common.types.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.773
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ecore.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.774
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.generator.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.774
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ide.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.774
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.java.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.775
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.junit4.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.775
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.logging.source_1.2.15.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.775
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.m2e.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.776
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ide.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.776
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.776
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.purexbase.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.777
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.smap.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.777
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.777
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.testing.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.777
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codemining.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.777
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ide.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.778
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.778
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.codetemplates.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.778
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.ecore.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.778
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.shared.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.779
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.779
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.ui.testing.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.779
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.util.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.779
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ide.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.780
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.junit.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.780
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.lib.source_2.26.0.v20220228-0748.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.781
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.781
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.testing.source_2.26.0.v20220228-0758.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.782
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.782
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xbase.ui.testing.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.783
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.generator.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.784
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ide.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.784
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.graph.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.785
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.ui.source_2.26.0.v20220228-0812.jar
+
+!ENTRY org.eclipse.pde.core 4 0 2024-04-08 15:57:51.785
+!MESSAGE File does not exist: /../.p2/pool/plugins/org.eclipse.xtext.xtext.wizard.source_2.26.0.v20220228-0751.jar
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:05:04.207
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:05:12.917
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:06:43.953
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:06:49.425
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager$6.run(UndoManager.java:330)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4320)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3943)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:08:58.777
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:27:58.225
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:771)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:275)
+	at org.eclipse.jface.resource.DeferredImageDescriptor.createImage(DeferredImageDescriptor.java:80)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:230)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LazyResourceManager.create(LazyResourceManager.java:97)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:72)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:175)
+	at org.eclipse.ui.actions.OpenWithMenu.getImage(OpenWithMenu.java:137)
+	at org.eclipse.ui.actions.OpenWithMenu.createMenuItem(OpenWithMenu.java:174)
+	at org.eclipse.ui.actions.OpenWithMenu.fill(OpenWithMenu.java:271)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:729)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1227)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:655)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeTopicChildAdded(MenuManagerRenderer.java:325)
+	at jdk.internal.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:294)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:304)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.reconcileManagerToModel(MenuManagerRenderer.java:1076)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.reconcileManagerToModel(MenuManagerRenderer.java:1014)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:379)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:355)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1528)
+	at org.eclipse.swt.widgets.Menu.menuWillOpen(Menu.java:808)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6360)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSMenu.popUpContextMenu(NSMenu.java:80)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:270)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4442)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-04-08 16:27:58.408
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.wb.internal.core.model.description.helpers.DescriptionHelper.getIconImage(DescriptionHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getComponentImage(ComponentPresentationHelper.java:166)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getFastPresentation(ComponentPresentationHelper.java:139)
+	at org.eclipse.wb.internal.core.model.description.helpers.ComponentPresentationHelper.getPresentation(ComponentPresentationHelper.java:114)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.preparePresentation(ComponentEntryInfo.java:259)
+	at org.eclipse.wb.core.editor.palette.model.entry.ComponentEntryInfo.initialize(ComponentEntryInfo.java:219)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.getVisualEntry(DesignerPalette.java:253)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette$4.getEntries(DesignerPalette.java:321)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$CategoryFigure.<init>(PaletteComposite.java:373)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite$PaletteFigure.refresh(PaletteComposite.java:289)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.refreshPalette(PaletteComposite.java:205)
+	at org.eclipse.wb.core.controls.palette.PaletteComposite.setPalette(PaletteComposite.java:198)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.showPalette(DesignerPalette.java:416)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.reloadPalette(DesignerPalette.java:172)
+	at org.eclipse.wb.internal.core.editor.palette.DesignerPalette.setInput(DesignerPalette.java:138)
+	at org.eclipse.wb.internal.core.editor.JavaDesignComposite.refresh(JavaDesignComposite.java:146)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:585)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8$1.run(DesignPage.java:449)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5186)
+	at org.eclipse.wb.internal.core.editor.DesignPage$8.run(DesignPage.java:446)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:434)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF_withProgress(DesignPage.java:465)
+	at org.eclipse.wb.internal.core.editor.DesignPage.internal_refreshGEF(DesignPage.java:415)
+	at org.eclipse.wb.internal.core.editor.UndoManager.refreshDesignerEditor(UndoManager.java:381)
+	at org.eclipse.wb.internal.core.editor.UndoManager.activate(UndoManager.java:90)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState_True(DesignPage.java:263)
+	at org.eclipse.wb.internal.core.editor.DesignPage.handleActiveState(DesignPage.java:241)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode.showPage(DefaultMultiMode.java:125)
+	at org.eclipse.wb.internal.core.editor.multi.DefaultMultiMode$1.widgetSelected(DefaultMultiMode.java:63)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3248)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1882)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4365)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3941)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
