@@ -55,7 +55,7 @@ public class PageJeu extends JFrame {
 		JMenuItem mntmNewMenuItem = new JMenuItem("Nouveaux jeu");
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new PageAcceuil().setVisible(true);
+				new Acceuil().setVisible(true);
 				dispose();
 			}
 		});
