@@ -1,0 +1,41 @@
+package ia;
+
+import java.awt.TextArea;
+
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+import projet.GoBangPanel;
+
+public class GomukuFrame extends JFrame{
+	
+	public GomukuFrame() {
+	}
+	
+	JButton       nouveauxJeu;     //新游戏
+	JCheckBox     affichageNum;  //显示数字
+	GomukuPanel   GomukuPanel; 
+	JRadioButton  humainHumain;      //人人对战
+	JRadioButton  humainIA;       //人机对战
+	JRadioButton  IAIA;
+	JRadioButton  guZhi;       //估值函数
+	JRadioButton  souSuoShu;   //搜索树
+	JPanel        jPanel1;         
+	TextArea      textArea;    //右侧多行文本
+
+	JRadioButton  human;   //人类先手
+	JRadioButton  robot;   //机器先手
+
+	JComboBox<Integer> jComboBox1;  //搜索深度
+	JComboBox<Integer> jComboBox2;  //搜索节点
+
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

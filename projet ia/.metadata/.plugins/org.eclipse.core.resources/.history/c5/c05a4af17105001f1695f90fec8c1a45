@@ -1,0 +1,15 @@
+package ia;
+
+import javax.swing.JFrame;
+
+public class GomukuFrame extends JFrame{
+	
+	public GomukuFrame() {
+	}
+
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,106 @@
+package ia;
+
+public class Node implements Comparable<Node>{
+
+		private int x; //position x
+		private int y; //position y
+		private int orderNumber; // enregistrer le numéro de node effectuer
+		private int player;  //couleur de node，1 est noir，2 est blanc, 0 est vide
+		
+		private int attaque;  //攻击分
+		private int defendre;  //防御分
+		private int somme;  //总分
+		
+		private StringBuffer buffer = new StringBuffer();
+		
+		@Override
+		public String toString() {
+			return "ChessBean [x=" + x + ", y=" + y + ", orderNumber=" + orderNumber + ", player=" + player + ", offense="
+					+ attaque + ", defentse=" + defendre + ", sum=" + somme + "]";
+		}
+
+		public int getOffense() {
+			return attaque;
+		}
+
+		public void setOffense(int offense) {
+			this.attaque = offense;
+		}
+
+		public int getDefentse() {
+			return defendre;
+		}
+
+		public void setDefentse(int defentse) {
+			this.defendre = defentse;
+		}
+
+		public int getSomme() {
+			return somme;
+		}
+
+		public void setSomme(int sum) {
+			this.somme = sum;
+		}
+
+		public Node(int x, int y, int player, int orderNumber ){
+			super();
+			this.x = x;
+			this.y = y;
+			this.orderNumber = orderNumber;
+			this.player = player;
+		}
+
+		public int getPlayer() {
+			return player;
+		}
+
+		public void setPlayer(int player) {
+			this.player = player;
+		}
+
+		
+		public int getX() {
+			return x;
+		}
+
+		public void setX(int x) {
+			this.x = x;
+		}
+
+		public int getY() {
+			return y;
+		}
+
+		public void setY(int y) {
+			this.y = y;
+		}
+
+		public int getOrderNumber() {
+			return orderNumber;
+		}
+
+		public void setOrderNumber(int orderNumber) {
+			this.orderNumber = orderNumber;
+		}
+
+		public int compareTo(Node node) {
+			
+			if(this.somme>node.somme) {
+				return -1;
+			}else if(this.somme<node.somme) {
+				return 1;
+			}else
+				return 0;
+		}
+
+		public StringBuffer getBuffer() {
+			return buffer;
+		}
+
+		public void setBuffer(StringBuffer buffer) {
+			this.buffer = buffer;
+		}
+		
+}
+

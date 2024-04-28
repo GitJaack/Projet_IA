@@ -1,0 +1,19 @@
+package ia;
+
+/**
+ * Fenetre
+ * @author meline
+ *
+ */
+public class GameFrame {
+	
+	public GameFrame() {
+		setTitle("")
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

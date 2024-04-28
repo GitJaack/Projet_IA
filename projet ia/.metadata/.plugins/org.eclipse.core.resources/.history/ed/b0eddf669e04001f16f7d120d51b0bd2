@@ -1,0 +1,136 @@
+package page;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Menu extends JFrame {
+
+	private JPanel contentPane;
+	
+	private JRadioButton joueur1Humain;
+	private JRadioButton joueur1AI;
+	private JRadioButton joueur2Humain;
+	private JRadioButton joueur2AI;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu frame = new Menu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Menu() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 339, 315);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JLabel lblNewLabel = new JLabel("Joueur 1");
+		
+		JLabel lblNewLabel_1 = new JLabel("Joueur 2");
+		
+		joueur1Humain = new JRadioButton("Humain");
+		
+		joueur1AI = new JRadioButton("IA");
+		
+		ButtonGroup groupeJoueur1 = new ButtonGroup();
+		groupeJoueur1.add(joueur1Humain);
+		groupeJoueur1.add(joueur1AI);
+		
+		JButton btnNewButton = new JButton("Jouer");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				commencerJeu(e);
+			}
+		});
+		
+		joueur2Humain = new JRadioButton("Humain");
+		
+		joueur2AI = new JRadioButton("IA");
+		
+		ButtonGroup groupeJoueur2 = new ButtonGroup();
+		groupeJoueur2.add(joueur2Humain);
+		groupeJoueur2.add(joueur2AI);
+		
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(83)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblNewLabel)
+								.addComponent(lblNewLabel_1))
+							.addGap(52)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(rdbtnNewRadioButton_2)
+								.addComponent(rdbtnNewRadioButton_1)
+								.addComponent(rdbtnNewRadioButton)
+								.addComponent(rdbtnNewRadioButton_3)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(122)
+							.addComponent(btnNewButton)))
+					.addContainerGap(61, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(57)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblNewLabel)
+						.addComponent(rdbtnNewRadioButton))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(rdbtnNewRadioButton_1)
+					.addGap(31)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblNewLabel_1)
+						.addComponent(rdbtnNewRadioButton_2))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(rdbtnNewRadioButton_3)
+					.addGap(18)
+					.addComponent(btnNewButton)
+					.addContainerGap(23, Short.MAX_VALUE))
+		);
+		contentPane.setLayout(gl_contentPane);
+		setLocationRelativeTo(null);
+		
+		
+	}
+
+	private void commencerJeu(ActionEvent e) {
+		
+		String joueur1="";
+		if(joueur1Humain.isSelected()) {
+			joueur1="Humain"
+		}
+		
+		
+	}
+}
