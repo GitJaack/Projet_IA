@@ -7,8 +7,6 @@ import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.RenderingHints;
-import java.awt.Toolkit;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,35 +14,15 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.lang.Exception;
-import java.lang.Math;
-import java.lang.SecurityException;
 import java.lang.String;
-import java.lang.System;
-import java.lang.Thread;
-import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.KeyStroke;
 import javax.swing.Timer;
-import javax.swing.UIManager;
 import javax.swing.event.MouseInputListener;
-import javax.swing.filechooser.FileFilter;
 
 public final class DrawingPanel implements ActionListener, MouseMotionListener {
 
@@ -59,7 +37,7 @@ public final class DrawingPanel implements ActionListener, MouseMotionListener {
     private Timer timer;
     private Color backgroundColor = Color.WHITE;
     private int initialPixel;
-    
+
     private class ImagePanel extends JPanel {
         private static final long serialVersionUID = 0;
         private Image image;
@@ -86,15 +64,15 @@ public final class DrawingPanel implements ActionListener, MouseMotionListener {
     public DrawingPanel(int width, int height) {
         this.width = width;
         this.height = height;
-        
+
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         initialPixel = image.getRGB(0, 0);
         g2 = (Graphics2D) image.getGraphics();
         g2.setColor(Color.BLACK);
-        
+
         panel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
         panel.setBackground(backgroundColor);
-        panel.setBounds(0,0,width,height);
+        panel.setBounds(0, 0, width, height);
         imagePanel = new ImagePanel(image);
         imagePanel.setBackground(backgroundColor);
         panel.add(imagePanel);
@@ -107,7 +85,7 @@ public final class DrawingPanel implements ActionListener, MouseMotionListener {
         frame.setBackground(Color.WHITE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
-        
+
         frame.pack();
         frame.setVisible(true);
         timer = new Timer(DELAY, this);
@@ -117,9 +95,11 @@ public final class DrawingPanel implements ActionListener, MouseMotionListener {
     public void addButton(JButton b) {
         panel.add(b);
     }
+
     public void addLabel(JLabel l) {
         panel.add(l);
     }
+
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() instanceof Timer) {
             panel.repaint();
@@ -212,10 +192,11 @@ public final class DrawingPanel implements ActionListener, MouseMotionListener {
             }
         });
     }
-    
-    public void mouseDragged(MouseEvent e) {}
-    public void mouseMoved(MouseEvent e) {}
 
+    public void mouseDragged(MouseEvent e) {
+    }
 
+    public void mouseMoved(MouseEvent e) {
+    }
 
 }
