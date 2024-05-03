@@ -1,15 +1,11 @@
 package main;
 
-import page.Acceuil;
+import page.GomokuPanel;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Acceuil page=new Acceuil();
-		page.setVisible(true);
-		
-		
-	}
+        GomokuPanel frame = new GomokuPanel();
+    }
 
 }
